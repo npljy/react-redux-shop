@@ -36,7 +36,9 @@ const wp = {
                         presets:['react','es2015',"stage-1"],
                         plugins: ["transform-class-properties"]
                     }
-                }
+                },
+                // 打包的时候跳过 文件夹 ，加快速度，提高性能
+                exclude: /node_modules/,
             },
             {
                 test:/\.css$/,
@@ -46,7 +48,8 @@ const wp = {
                 test:/\.(jpg|png|jpeg|gif)$/,
                 use: ['url-loader']
             }
-        ]
+        ],
+       
     },
     plugins:[
         new HtmlWebpackPlugin({
