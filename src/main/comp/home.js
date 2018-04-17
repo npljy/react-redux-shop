@@ -127,12 +127,16 @@ class HomeR extends Component{
     }
     tologin=()=>{
         this.setState({
-            tolog:true
+            tolog:true,
+            userval:'',
+            pwdval:''
         })
     }
     closeLogin = ()=>{
         this.setState({
-            tolog:false
+            tolog:false,
+            userval:'',
+            pwdval:''
         })
     }
 
@@ -179,6 +183,7 @@ class HomeR extends Component{
                             <li><input placeholder="请输入密码"
                                 value = {pwdval}
                                 onChange = {this.password}
+                                type="password"
                             /></li>
                         </ul>
                         <div className="sure">
