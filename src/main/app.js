@@ -92,6 +92,7 @@ class AppR extends Component {
 			cart: 0,
 			pros: 0
 		});
+		this.newPath();
 	};
 
 	componentDidMount() {
