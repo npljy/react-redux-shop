@@ -224,7 +224,7 @@ class RegR extends Component{
                                         <input placeholder="必须以字母开头，由字母数字下划线组成，4位到8位" disabled  ref = "reg-user-tip"/>
                                     </div>
                                     <div className="login-pwd" >
-                                        <input placeholder="仅支持大国大陆手机号码" disabled ref = "reg-phone-tip"/>
+                                        <input placeholder="仅支持中国大陆手机号码" disabled ref = "reg-phone-tip"/>
                                     </div>
                                     <div className="login-user" >
                                         <input placeholder="必须输入格式正确的邮箱" disabled ref = "reg-email-tip"/>
