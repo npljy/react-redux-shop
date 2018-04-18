@@ -1090,6 +1090,8 @@ label{
 	z-index: 1000;
 	width: 255px;
 	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 @media (max-width: 767px){

@@ -32,7 +32,7 @@ class ListR extends Component{
         let {cont} = this.state;
         if(user){
             dispatch({ type: "NEW_PATH" });
-            this.refs.tips.style.top = 0;
+            this.refs.tips.style.top = "-2px";
             let _this = this;
             let rest;
             if(_this.refs.tips && _this.refs.tips.style){
