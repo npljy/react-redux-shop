@@ -193,11 +193,15 @@ class AppR extends Component {
 				<Route
 				path="/:name"
 				render={props => {
-					if (props.match.url === "/contact") return <Form />;
-					else if (props.match.url === "/login") {
+					// props.match.url
+					// props.match.params.name
+					let {match:{params:{name}}} = props;
+					// console.log(name)
+					if (name === "contact") return <Form />;
+					else if (name === "login") {
 					// 判断是否有登录的cookie信息，没有则跳转到登录页面
 					return <Login initCart={this.initCart} />;
-					} else if (props.match.url === "/reg")
+					} else if (name === "reg")
 					return (
 						<Reg
 						initCart={this.initCart}
@@ -205,10 +209,10 @@ class AppR extends Component {
 						addcart1={this.addcart1}
 						/>
 					);
-					else if (props.match.url === "/forget") return <Forget />;
-					else if (props.match.url === "/cart")
+					else if (name === "forget") return <Forget />;
+					else if (name === "cart")
 					return <Cart initCart={this.initCart} />;
-					else if (props.match.url === "/detail")
+					else if (name === "detail")
 					return (
 						<Detail
 						oid={props.location.search.substring(1).split("=")[1]}
